@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-debug-apk:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Depoyu İndir (Checkout)
@@ -21,11 +21,8 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Android SDK Ortamını Hazırla
-        uses: android-actions/setup-android@v3
-
       - name: Android SDK Lisanslarını Onayla
-        run: yes | sdkmanager --licenses > /dev/null 2>&1 || true
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null 2>&1 || true
 
       - name: Gradle 8.9 Kur
         uses: gradle/actions/setup-gradle@v4
