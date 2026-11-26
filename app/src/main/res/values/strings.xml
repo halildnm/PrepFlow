@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PrepFlow</string>
+    <string name="widget_name">PrepFlow Günlük Özet</string>
+    <string name="widget_description">Günün sıradaki dersini ve yaklaşan en acil 3 ödevi gösterir.</string>
+</resources>
